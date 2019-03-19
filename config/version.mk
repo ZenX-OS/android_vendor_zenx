@@ -22,3 +22,9 @@ ifeq ($(WITH_GAPPS),true)
 else
     ZENX_BUILD_VERSION := ZenX-OS-v$(ZENX_VERSION)-$(ZENX_BUILD_TYPE)-$(ZENX_BUILD)-$(shell date -u +%Y%m%d)
 endif
+
+export ZENX_BUILD_DATE
+export ZENX_BUILD_TYPE
+export ZENX_BUILD_VERSION
+export ZENX_FINGERPRINT
+export ZENX_VERSION
