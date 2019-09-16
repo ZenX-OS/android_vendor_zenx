@@ -10,6 +10,8 @@ ZENX_VERSION_MINOR = 0
     VERSION := $(ZENX_VERSION_MAJOR).$(ZENX_VERSION_MINOR)
 #endif
 
+TARGET_PRODUCT_SHORT := $(subst zenx_,,$(ZENX_BUILDTYPE))
+
 # Set ZENX_BUILDTYPE
 ifdef ZENX_NIGHTLY
     ZENX_BUILDTYPE := NIGHTLY
@@ -35,9 +37,11 @@ endif
 
 ZENX_DISPLAY_VERSION := $(VERSION)
 ZENX_DISPLAY_BUILDTYPE := $(ZENX_BUILDTYPE)
+ZENX_FINGERPRINT := Zenx/$(VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date +%Y%m%d)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.zenx.version=$(ZENX_DISPLAY_VERSION) \
   ro.zenx.build.status=$(ZENX_BUILDTYPE) \
   ro.zenx.releasetype=$(ZENX_BUILDTYPE) \
-  ro.zenx.changelog.version=Changelog-$(ZENX_VERSION)
+  ro.zenx.changelog.version=Changelog-$(ZENX_VERSION) \
+  ro.zenx.fingerprint=$(ZENX_FINGERPRINT)
