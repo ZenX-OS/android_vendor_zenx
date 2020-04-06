@@ -100,12 +100,12 @@ if [ -f $existingOTAjson ]; then
 	]
 }' >> $output
 
+        echo "JSON file data for OTA support:"
 else
 	#if not already supported, create dummy file with info in it on how to
 	echo 'There is no official support for this device yet' >> $output;
 	echo 'Consider adding official support by reading the documentation at https://github.com/Zenx-OS/android_vendor_zenxOTA/blob/11.1/README.md' >> $output;
 fi
 
-echo "JSON file data for OTA support:"
 cat $output
 echo ""
