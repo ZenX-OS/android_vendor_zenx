@@ -39,9 +39,3 @@ ZENX_DISPLAY_VERSION := $(VERSION)
 ZENX_DISPLAY_BUILDTYPE := $(ZENX_BUILDTYPE)
 ZENX_FINGERPRINT := Zenx/$(VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date +%Y%m%d)
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.zenx.version=$(ZENX_DISPLAY_VERSION) \
-  ro.zenx.build.status=$(ZENX_BUILDTYPE) \
-  ro.zenx.releasetype=$(ZENX_BUILDTYPE) \
-  ro.zenx.changelog.version=Changelog-$(ZENX_VERSION) \
-  ro.zenx.fingerprint=$(ZENX_FINGERPRINT)
