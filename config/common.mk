@@ -137,3 +137,4 @@ endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/zenx/config/partner_gms.mk
+-include packages/apps/Plugins/plugins.mk
