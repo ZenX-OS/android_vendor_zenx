@@ -18,7 +18,7 @@ ZENX_TARGET_PACKAGE := $(PRODUCT_OUT)/$(ZENX_VERSION).zip
 .PHONY: zenx
 zenx: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(ZENX_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(ZENX_TARGET_PACKAGE) > $(ZENX_TARGET_PACKAGE).md5
+	$(hide) $(MD5SUM) $(ZENX_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(ZENX_TARGET_PACKAGE).md5
 	@echo -e ${CL_CYN}""${CL_CYN}
 	@echo -e ""
 	@echo -e ${CL_BLU}"███████╗███████╗███╗   ██╗██╗  ██╗      ██████╗ ███████╗"
