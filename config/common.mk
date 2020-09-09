@@ -161,10 +161,6 @@ include vendor/zenx/themes/BrightnessSlider/slider.mk
 # Include ZenX Nav bar Styles
 include vendor/zenx/themes/Navbar/navbar.mk
 
-# Overlays
-PRODUCT_PACKAGES += \
-    NexusLauncherReleaseOverlay
-
 # Extra tools in ZenX
 PRODUCT_PACKAGES += \
     PrimaryColorCharcoalOverlay \
@@ -285,8 +281,7 @@ endif
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    NexusLauncherRelease
+    SystemUI
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/zenx/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/zenx/overlay/common
