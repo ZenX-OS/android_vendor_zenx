@@ -117,15 +117,6 @@ endif
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.boot.vendor.overlay.theme=com.potato.overlay.lawnconf
-
-# Lawnchair Default Configuration
-ifeq ($(LAWNCHAIR_OPTOUT),)
-PRODUCT_PACKAGES += \
-    LawnConf
-endif
-
 # Strip the local variable table and the local variable type table to reduce
 # the size of the system image. This has no bearing on stack traces, but will
 # leave less information available via JDWP.
@@ -255,8 +246,17 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
 
 # Lawnchair
-ifneq ($(USE_PIXEL_LAUNCHER),true)
+ifeq ($(LAWNCHAIR_OPTOUT),)
    include vendor/lawnchair/lawnchair.mk
+endif
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.vendor.overlay.theme=com.potato.overlay.lawnconf
+
+# Lawnchair Default Configuration
+ifeq ($(LAWNCHAIR_OPTOUT),)
+PRODUCT_PACKAGES += \
+    LawnConf
 endif
 
 # Media
@@ -291,10 +291,9 @@ PRODUCT_PACKAGES += \
     OpenDelta
 endif
 
-# OP Launcher
-ifeq ($(USE_OP_LAUNCHER),true)
-PRODUCT_PACKAGES += \
-   include vendor/oplauncher/OPLauncher2.mk
+# OPLauncher
+ifeq ($(LAWNCHAIR_OPTOUT), true)
+include vendor/oplauncher/OPLauncher2.mk
 endif
 
 # Face Unlock
