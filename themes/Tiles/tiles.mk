@@ -19,4 +19,5 @@ PRODUCT_PACKAGES += \
     QSTileTriangles \
     QSTileNeonLight \
     QSTileJustIcon \
+    QSTileOxygen \
     QSTileBottomTriangle \
