@@ -141,7 +141,6 @@ PRODUCT_PACKAGES += \
     Browser \
     CustomDoze \
     GalleryGoPrebuilt \
-    NexusLauncherRelease \
     OmniStyle \
     PixelThemesStub2019 \
     SoundPickerPrebuilt \
@@ -161,10 +160,6 @@ include vendor/zenx/themes/BrightnessSlider/slider.mk
 
 # Include ZenX Nav bar Styles
 include vendor/zenx/themes/Navbar/navbar.mk
-
-# Overlays
-PRODUCT_PACKAGES += \
-    NexusLauncherReleaseOverlay
 
 # Extra tools in ZenX
 PRODUCT_PACKAGES += \
@@ -245,9 +240,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
 
-# Lawnchair
-ifneq ($(USE_PIXEL_LAUNCHER),true)
-   include vendor/lawnchair/lawnchair.mk
+# Launcher Config
+ifeq ($(TARGET_LAUNCHER_CHOICE),oplauncher)
+include vendor/oplauncher/OPLauncher2.mk
+else ifeq ($(TARGET_LAUNCHER_CHOICE),pixel)
+PRODUCT_PACKAGES += \
+     NexusLauncherRelease
+else
+     $(warning "Pixelstyle: TARGET_LAUNCHER_CHOICE is invalid or undefined, building Lawnchair")
+
+include vendor/lawnchair/lawnchair.mk
+endif
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.vendor.overlay.theme=com.potato.overlay.lawnconf
+
+# Lawnchair Default Configuration
+ifeq ($(TARGET_LAUNCHER_CHOICE),)
+PRODUCT_PACKAGES += \
+    LawnConf
 endif
 
 # Media
@@ -270,8 +281,7 @@ endif
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    NexusLauncherRelease
+    SystemUI
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/zenx/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/zenx/overlay/common
@@ -280,12 +290,6 @@ DEVICE_PACKAGE_OVERLAYS += vendor/zenx/overlay/common
 ifeq ($(ZENX_BUILD_TYPE), Official)
 PRODUCT_PACKAGES += \
     OpenDelta
-endif
-
-# OP Launcher
-ifeq ($(USE_OP_LAUNCHER),true)
-PRODUCT_PACKAGES += \
-   include vendor/oplauncher/OPLauncher2.mk
 endif
 
 # Face Unlock
