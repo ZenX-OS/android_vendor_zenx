@@ -19,7 +19,8 @@ PRODUCT_PACKAGES += \
     LineageSettingsProvider \
     LockClock \
     Profiles \
-    WeatherProvider
+    WeatherProvider \
+    ZenxUpdater
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
