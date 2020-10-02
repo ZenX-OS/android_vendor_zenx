@@ -161,6 +161,10 @@ include vendor/zenx/themes/BrightnessSlider/slider.mk
 # Include ZenX Nav bar Styles
 include vendor/zenx/themes/Navbar/navbar.mk
 
+# Include ZenX fonts
+include vendor/zenx/themes/Fonts/font.mk
+include vendor/zenx/fonts/fonts.mk
+
 # Extra tools in ZenX
 PRODUCT_PACKAGES += \
     PrimaryColorCharcoalOverlay \
