@@ -124,6 +124,13 @@ DEVICE_PACKAGE_OVERLAYS += vendor/zenx/overlay/common
 # Zenx Versioning System
 -include vendor/zenx/config/versions.mk
 
+# Zenx Packages
 -include vendor/zenx/config/zenx_packages.mk
+
+# Gapps
+ifeq ($(ZENX_BUILD_VARIANT), gapps)
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+endif
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/zenx/config/partner_gms.mk

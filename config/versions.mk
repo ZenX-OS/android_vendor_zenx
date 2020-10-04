@@ -7,6 +7,9 @@ ZENX_VERSION_MINOR = 0
 # Zenx Android version
 ZENX_VERSION_STATIC = 2.0
 
+# Set Zenx Build Variant
+ZENX_BUILD_VARIANT ?= gapps
+
 #ifdef ZENX_VERSION_MAINTENANCE
 #    VERSION := $(ZENX_VERSION_MAJOR).$(ZENX_VERSION_MINOR)-$(ZENX_VERSION_MAINTENANCE)
 #else
@@ -35,7 +38,7 @@ endif
 ifdef ZENX_RELEASE
     ZENX_VERSION := Zenx-v$(VERSION)
 else
-    ZENX_VERSION := Zenx-v$(VERSION)-$(ZENX_BUILD)-$(ZENX_BUILDTYPE)-$(shell date +%Y%m%d)
+    ZENX_VERSION := ZenX-OS-v$(VERSION)-$(ZENX_BUILD)-$(ZENX_BUILDTYPE)-$(ZENX_BUILD_VARIANT)-$(shell date +%Y%m%d)
 endif
 
 ZENX_DISPLAY_VERSION := $(VERSION)
