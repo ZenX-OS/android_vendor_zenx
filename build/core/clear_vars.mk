@@ -1,4 +1,4 @@
 #
-# Lineage-specific variable clears
+# Zenx-specific variable clears
 #
 LOCAL_IGNORE_SUBDIR :=

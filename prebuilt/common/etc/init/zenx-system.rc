@@ -1,4 +1,4 @@
-# LineageOS core functionality
+# Zenx core functionality
 on init
     export TERMINFO /system/etc/terminfo
 

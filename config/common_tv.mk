@@ -1,16 +1,16 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common.mk)
+# Inherit common Zenx stuff
+$(call inherit-product, vendor/zenx/config/common.mk)
 
-# Inherit Lineage atv device tree
-$(call inherit-product, device/lineage/atv/lineage_atv.mk)
+# Inherit Zenx atv device tree
+$(call inherit-product, device/zenx/atv/zenx_atv.mk)
 
 # AOSP packages
 PRODUCT_PACKAGES += \
     LeanbackIME
 
-# Lineage packages
+# Zenx packages
 PRODUCT_PACKAGES += \
     AppDrawer \
     LineageCustomizer
 
-DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/tv
+DEVICE_PACKAGE_OVERLAYS += vendor/zenx/overlay/tv

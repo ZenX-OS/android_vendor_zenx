@@ -1,5 +1,5 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mobile.mk)
+# Inherit common Zenx stuff
+$(call inherit-product, vendor/zenx/config/common_mobile.mk)
 
 PRODUCT_SIZE := full
 
