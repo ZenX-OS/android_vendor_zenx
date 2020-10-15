@@ -95,5 +95,8 @@ PRODUCT_PACKAGES += \
 # Themes
 PRODUCT_PACKAGES += \
     LineageThemesStub \
-    LineageBlackTheme \
     ThemePicker
+
+
+# Include ZenX overlays
+include packages/overlays/zenx/zenx_overlays.mk
