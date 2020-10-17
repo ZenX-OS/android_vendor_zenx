@@ -95,8 +95,7 @@ PRODUCT_PACKAGES += \
     UserFive \
     UserSix \
     UserSeven \
-    Yellow \
-    White
+    Yellow
 
 # Brand Accents
 PRODUCT_PACKAGES += \
