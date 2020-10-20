@@ -29,6 +29,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     ZenXThemesStub \
     ThemePicker \
+    OmniJaws \
     OmniStyle \
     Matlog
 
