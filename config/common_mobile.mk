@@ -15,14 +15,6 @@ endif
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# Custom off-mode charger
-ifeq ($(WITH_ZENX_CHARGER),true)
-PRODUCT_PACKAGES += \
-    zenx_charger_res_images \
-    font_log.png \
-    libhealthd.zenx
-endif
-
 # Customizations
 PRODUCT_PACKAGES += \
     LineageNavigationBarNoHint \
