@@ -139,6 +139,10 @@ ifeq ($(ZENX_BUILD_VARIANT), gapps)
 $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 endif
 
+
+# Sepolicy
+include vendor/zenx/config/system_sepolicy.mk
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/zenx/config/partner_gms.mk
 -include packages/apps/Plugins/plugins.mk
