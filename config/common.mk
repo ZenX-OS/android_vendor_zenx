@@ -125,6 +125,10 @@ endif
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/zenx/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/zenx/overlay/common
 
+# SystemUI plugins
+PRODUCT_PACKAGES += \
+    QuickAccessWallet
+
 # Zenx Bootanimation
 -include vendor/zenx/config/bootanimation.mk
 
