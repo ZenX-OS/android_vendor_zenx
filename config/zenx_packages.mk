@@ -24,10 +24,8 @@ PRODUCT_PACKAGES += \
     Recorder \
     LineageParts \
     LineageSettingsProvider \
-    LockClock \
     Phonograph \
     Profiles \
-    WeatherProvider \
     ZenxUpdater
 
 # Dex preopt
