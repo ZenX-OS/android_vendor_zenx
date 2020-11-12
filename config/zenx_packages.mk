@@ -24,8 +24,10 @@ PRODUCT_PACKAGES += \
     Recorder \
     LineageParts \
     LineageSettingsProvider \
-    Phonograph \
     Profiles \
+    Phonograph \
+    Seedvault \
+    GCamGo \
     ZenxUpdater
 
 # Dex preopt
