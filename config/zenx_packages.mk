@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
     Phonograph \
     Seedvault \
     GCamGo \
+    SimpleGalleryPro \
     ZenxUpdater
 
 # Dex preopt
