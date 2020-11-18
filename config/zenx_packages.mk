@@ -12,10 +12,9 @@ PRODUCT_PACKAGES += \
     Email \
     ExactCalculator \
     Exchange2 \
-    LiveWallpapersPicker \
     messaging \
     SimpleGalleryPro \
-    WallpaperPicker2
+
 endif
 
 # Zenx Packages
@@ -29,7 +28,10 @@ PRODUCT_PACKAGES += \
     Seedvault \
     GCamGo \
     SimpleGalleryPro \
-    ZenxUpdater
+    ZenxUpdater \
+    CustomDoze \
+    LiveWallpapersPicker \
+    WallpaperPicker2
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -91,7 +93,8 @@ PRODUCT_PACKAGES += \
 
 # AOSP packages
 PRODUCT_PACKAGES += \
-    Terminal
+    Terminal \
+    LiveWallpapersPicker
 
 # Themes
 PRODUCT_PACKAGES += \
