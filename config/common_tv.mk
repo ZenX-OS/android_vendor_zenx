@@ -10,7 +10,6 @@ PRODUCT_PACKAGES += \
 
 # Zenx packages
 PRODUCT_PACKAGES += \
-    AppDrawer \
     LineageCustomizer
 
 DEVICE_PACKAGE_OVERLAYS += vendor/zenx/overlay/tv
