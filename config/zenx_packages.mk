@@ -31,7 +31,9 @@ PRODUCT_PACKAGES += \
     ZenxUpdater \
     CustomDoze \
     LiveWallpapersPicker \
-    WallpaperPicker2
+    WallpaperPicker2 \
+    OmniJaws \
+    OmniStyle
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
