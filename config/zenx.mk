@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
     Exchange2 \
     LiveWallpapersPicker \
     messaging \
+    SimpleGalleryPro \
     WallpaperPicker2
 endif
 
@@ -52,6 +53,7 @@ PRODUCT_PACKAGES += \
     ZenXThemesStub \
     ThemePicker \
     OmniJaws \
+    Phonograph \
     OmniStyle \
     Matlog \
     QuickAccessWallet \
