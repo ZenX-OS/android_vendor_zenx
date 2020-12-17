@@ -28,7 +28,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     ZenXThemesStub \
-    ThemePicker
+    ThemePicker \
+    OmniStyle
 
 # Fonts
 PRODUCT_PACKAGES += \
