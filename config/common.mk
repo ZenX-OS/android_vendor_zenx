@@ -48,6 +48,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
 
+# Flipendo
+PRODUCT_COPY_FILES += \
+    vendor/lineage/config/permissions/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
+
 # Lineage-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/lineage-sysconfig.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lineage-sysconfig.xml
