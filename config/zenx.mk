@@ -57,6 +57,10 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     Matlog \
     QuickAccessWallet \
+    SimpleGalleryPro \
+    LiveWallpapersPicker \
+    WallpaperPicker2 \
+    CustomDoze \
     Terminal
 
 # Fonts
