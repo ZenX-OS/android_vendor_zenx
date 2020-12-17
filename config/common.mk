@@ -6,6 +6,9 @@ $(call inherit-product-if-exists, external/moto/faceunlock/config.mk)
 
 PRODUCT_BRAND ?= ZenX-OS
 
+# Set Zenx Build Variant
+ZENX_BUILD_VARIANT ?= gapps
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -194,8 +197,8 @@ PRODUCT_VERSION_MINOR = 0
 # Increase ZenX Version with each major release.
 ZENX_VERSION := 2.1
 
-LINEAGE_VERSION := ZenX-OS-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-v$(ZENX_VERSION)
-LINEAGE_DISPLAY_VERSION := ZenX-OS-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-v$(ZENX_VERSION)
+LINEAGE_VERSION := ZenX-OS-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-v$(ZENX_VERSION)-$(ZENX_BUILD_VARIANT)
+LINEAGE_DISPLAY_VERSION := ZenX-OS-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-v$(ZENX_VERSION)-$(ZENX_BUILD_VARIANT)-
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
@@ -219,6 +222,12 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
     endif
 endif
 endif
+
+# Gapps
+ifeq ($(ZENX_BUILD_VARIANT), gapps)
+    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+endif
+
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk

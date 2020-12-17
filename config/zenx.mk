@@ -32,6 +32,21 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
 endif
 
+# AOSP packages
+ifeq ($(ZENX_BUILD_VARIANT), vanilla)
+PRODUCT_PACKAGES += \
+    Contacts \
+    Calendar \
+    DeskClock \
+    Dialer \
+    Email \
+    ExactCalculator \
+    Exchange2 \
+    LiveWallpapersPicker \
+    messaging \
+    WallpaperPicker2
+endif
+
 # Extra packages
 PRODUCT_PACKAGES += \
     ZenXThemesStub \
