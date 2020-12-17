@@ -225,7 +225,7 @@ endif
 
 # Gapps
 ifeq ($(ZENX_BUILD_VARIANT), gapps)
-    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+$(call inherit-product, vendor/gapps/gapps.mk)
 endif
 
 
