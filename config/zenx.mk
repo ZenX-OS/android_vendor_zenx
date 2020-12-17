@@ -39,7 +39,8 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle \
     Matlog \
-    QuickAccessWallet
+    QuickAccessWallet \
+    Terminal
 
 # Fonts
 PRODUCT_PACKAGES += \
