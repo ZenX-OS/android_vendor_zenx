@@ -1,6 +1,7 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/zenx.mk)
+$(call inherit-product-if-exists, packages/overlays/zenx/zenx_overlays.mk)
 
 PRODUCT_BRAND ?= ZenX-OS
 
@@ -116,11 +117,6 @@ PRODUCT_PACKAGES += \
     LineageSettingsProvider \
     LineageSetupWizard \
     Updater
-
-# Themes
-PRODUCT_PACKAGES += \
-    LineageThemesStub \
-    ThemePicker
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
