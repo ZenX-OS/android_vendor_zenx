@@ -31,7 +31,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     OmniJaws \
     OmniStyle \
-    Matlog
+    Matlog \
+    QuickAccessWallet
 
 # Fonts
 PRODUCT_PACKAGES += \
