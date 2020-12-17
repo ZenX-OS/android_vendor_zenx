@@ -2,6 +2,7 @@
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/zenx.mk)
 $(call inherit-product-if-exists, packages/overlays/zenx/zenx_overlays.mk)
+$(call inherit-product-if-exists, external/moto/faceunlock/config.mk)
 
 PRODUCT_BRAND ?= ZenX-OS
 
