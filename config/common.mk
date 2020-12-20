@@ -233,9 +233,11 @@ ifeq ($(ZENX_BUILD_VARIANT), gapps)
 $(call inherit-product, vendor/gapps/gapps.mk)
 endif
 
-
 # Sepolicy
 include vendor/lineage/config/system_sepolicy.mk
+
+# lineage Bootanimation
+-include vendor/lineage/config/bootanimation.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
