@@ -8,9 +8,11 @@ endif
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.zenx.build.version=$(LINEAGE_VERSION) \
     ro.zenx.display.version=$(LINEAGE_DISPLAY_VERSION) \
+    ro.zenx.releasetype=$(ZENX_BUILDTYPE) \
     ro.zenx.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(ZENX_VERSION) \
-    ro.zenx.build.variant=$(ZENX_BUILD_VARIANT)
+    ro.zenx.build.variant=$(ZENX_BUILD_VARIANT) \
+
 
 # LineageOS Platform SDK Version
 ADDITIONAL_BUILD_PROPERTIES += \
