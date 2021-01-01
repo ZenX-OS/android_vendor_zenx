@@ -53,11 +53,11 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     Phonograph \
     OmniStyle \
-    Matlog \
     QuickAccessWallet \
-    SimpleGalleryPro \
     CustomDoze \
-    Terminal
+    SimpleDeviceConfig \
+    LiveWallpapersPicker \
+    WallpaperPicker2
 
 # Fonts
 PRODUCT_PACKAGES += \
