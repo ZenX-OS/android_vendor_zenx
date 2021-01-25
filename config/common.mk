@@ -118,7 +118,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Terminal \
     LiveWallpapersPicker \
-    WallpaperPicker2
+    WallpaperPicker2 \
+    SoundPickerPrebuilt
 
 # Lineage packages
 PRODUCT_PACKAGES += \
