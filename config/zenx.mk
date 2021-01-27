@@ -122,7 +122,6 @@ PRODUCT_PACKAGES += \
     QSTileNinja \
     QSTileTriangles \
     QSTileNeonLight \
-    QSTileJustIcon \
     QSTileOxygen \
     QSTileBottomTriangle
 
