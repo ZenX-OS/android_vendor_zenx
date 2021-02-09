@@ -57,8 +57,10 @@ PRODUCT_PACKAGES += \
     CustomDoze \
     SimpleDeviceConfig \
     LiveWallpapersPicker \
-    WallpaperPicker2
-
+    WallpaperPicker2 \
+    StitchImage \
+    StitchImageService
+    
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
