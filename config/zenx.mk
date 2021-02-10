@@ -60,7 +60,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     StitchImage \
     StitchImageService
-    
+
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
 # UI Styles
 PRODUCT_PACKAGES += \
     UiStyleDefault \
-    UiStyleRoundLarge \
+    UiStyleAOSP \
     UiStyleRoundMedium \
     UiStyleNoCornerRadius \
     UiStyleRectangle
