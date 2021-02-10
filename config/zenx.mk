@@ -32,6 +32,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
 endif
 
+# Copy ZenX permissions!
+PRODUCT_COPY_FILES += \
+    vendor/lineage/etc/permissions/privapp-permissions-zenx.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-zenx.xml
+
 # AOSP packages
 ifeq ($(ZENX_BUILD_VARIANT), vanilla)
 PRODUCT_PACKAGES += \
