@@ -63,7 +63,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     WallpaperPicker2 \
     StitchImage \
-    StitchImageService
+    StitchImageService \
+    SimpleGalleryPro
 
 # Fonts
 PRODUCT_PACKAGES += \
