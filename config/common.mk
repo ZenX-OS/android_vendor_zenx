@@ -247,9 +247,15 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
 endif
 endif
 
+ifneq ($(ZENX_BUILD_VARIANT),gapps)
+    PRODUCT_PACKAGE_OVERLAYS += vendor/yaap/overlay/no_apex
+endif
+
+
 # Gapps
-ifeq ($(ZENX_BUILD_VARIANT), gapps)
-$(call inherit-product, vendor/gapps/gapps.mk)
+ifeq ($(ZENX_BUILD_VARIANT),gapps)
+    $(call inherit-product-if-exists, vendor/google/gms/config.mk)
+    $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 endif
 
 # Sepolicy
