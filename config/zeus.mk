@@ -110,6 +110,15 @@ PRODUCT_PACKAGES += \
     UiStyleNoCornerRadius \
     UiStyleRoundLarge 
 
+# Statusbar height
+PRODUCT_PACKAGES += \
+    StatusbarHeightDefault \
+    StatusbarHeightSmall \
+    StatusbarHeightMedium \
+    StatusbarHeightLarge \
+    StatusbarHeightExtraLarge \
+    StatusbarHeightDualStatusbar
+    
 # Tiles themes
 PRODUCT_PACKAGES += \
     QSTileCircleTrim \
