@@ -4,14 +4,14 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
 
-# ZenX-OS System Version
+# Zeus-OS System Version
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.zenx.build.version=$(LINEAGE_VERSION) \
-    ro.zenx.display.version=$(LINEAGE_DISPLAY_VERSION) \
-    ro.zenx.releasetype=$(ZENX_BUILDTYPE) \
-    ro.zenx.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(ZENX_VERSION) \
-    ro.zenx.build.variant=$(ZENX_BUILD_VARIANT) \
+    ro.zeus.build.version=$(LINEAGE_VERSION) \
+    ro.zeus.display.version=$(LINEAGE_DISPLAY_VERSION) \
+    ro.zeus.releasetype=$(ZEUS_BUILDTYPE) \
+    ro.zeus.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.modversion=$(ZEUS_VERSION) \
+    ro.zeus.build.variant=$(ZEUS_BUILD_VARIANT) \
 
 
 # LineageOS Platform SDK Version

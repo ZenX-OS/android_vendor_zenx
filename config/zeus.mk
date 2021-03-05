@@ -32,12 +32,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
 endif
 
-# Copy ZenX permissions!
+# Copy Zeus permissions!
 PRODUCT_COPY_FILES += \
-    vendor/lineage/etc/permissions/privapp-permissions-zenx.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-zenx.xml
+    vendor/lineage/etc/permissions/privapp-permissions-zeus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-zeus.xml
 
 # AOSP packages
-ifeq ($(ZENX_BUILD_VARIANT), vanilla)
+ifeq ($(ZEUS_BUILD_VARIANT), vanilla)
 PRODUCT_PACKAGES += \
     Contacts \
     Etar \
@@ -52,7 +52,7 @@ endif
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    ZenXThemesStub \
+    ZeusThemesStub \
     ThemePicker \
     OmniJaws \
     Phonograph \

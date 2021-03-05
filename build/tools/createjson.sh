@@ -16,7 +16,7 @@
 #
 
 #$1=TARGET_DEVICE, $2=PRODUCT_OUT, $3=LINEAGE_VERSION
-existingOTAjson=./vendor/zenxOTA/$1.json
+existingOTAjson=./vendor/zeusOTA/$1.json
 output=$2/$1.json
 
 #cleanup old file
@@ -35,7 +35,7 @@ if [ -f $existingOTAjson ]; then
 	v_max=`echo "$version" | cut -d'.' -f1 | cut -d'v' -f2`
 	v_min=`echo "$version" | cut -d'.' -f2`
 	version=`echo $v_max.$v_min`
-	download="https://sourceforge.net/projects/zenx-os/files/'$device'/'$v_max'.x/'$4'/download"
+	download="https://download.zenx-os.com/?dir='$device'"
 	buildprop=$2/system/build.prop
 	linenr=`grep -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
 	timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
@@ -82,7 +82,7 @@ if [ -f $existingOTAjson ]; then
 			"oem": "'$oem'",
 			"device": "'$device'",
 			"filename": "'$filename'",
-			"download": "https://sourceforge.net/projects/zenx-os/files/'$1'/'$v_max'.x/'$3'/download",
+			"download": "https://sourceforge.net/projects/zeus-os/files/'$1'/'$v_max'.x/'$3'/download",
 			"timestamp": '$timestamp',
 			"md5": "'$md5'",
 			"size": '$size',
@@ -104,7 +104,7 @@ if [ -f $existingOTAjson ]; then
 else
 	#if not already supported, create dummy file with info in it on how to
 	echo 'There is no official support for this device yet' >> $output;
-	echo 'Consider adding official support by reading the documentation at https://github.com/Zenx-OS/android_vendor_zenxOTA/blob/11.1/README.md' >> $output;
+	echo 'Consider adding official support by reading the documentation at https://github.com/Zeus-OS/android_vendor_zeusOTA/blob/11.1/README.md' >> $output;
 fi
 
 cat $output

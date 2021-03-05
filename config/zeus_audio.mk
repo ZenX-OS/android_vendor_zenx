@@ -1,5 +1,5 @@
 #
-# ZenX Audio Files
+# Zeus Audio Files
 #
 
 NOTIFICATION_PATH := vendor/lineage/prebuilt/common/media/audio/notifications

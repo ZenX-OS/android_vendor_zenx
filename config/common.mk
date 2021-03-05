@@ -1,12 +1,12 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
-$(call inherit-product-if-exists, vendor/lineage/config/zenx.mk)
+$(call inherit-product-if-exists, vendor/lineage/config/zeus.mk)
 $(call inherit-product-if-exists, external/motorola/faceunlock/config.mk)
 
-PRODUCT_BRAND ?= ZenX-OS
+PRODUCT_BRAND ?= Zeus-OS
 
-# Set Zenx Build Variant
-ZENX_BUILD_VARIANT ?= gapps
+# Set Zeus Build Variant
+ZEUS_BUILD_VARIANT ?= gapps
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -89,8 +89,8 @@ include vendor/lineage/config/aosp_audio.mk
 # Include Lineage audio files
 include vendor/lineage/config/lineage_audio.mk
 
-# Include ZenX audio files
-include vendor/lineage/config/zenx_audio.mk
+# Include Zeus audio files
+include vendor/lineage/config/zeus_audio.mk
 
 ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 # Lineage SDK
@@ -191,20 +191,20 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
-# Set ZENX_BUILDTYPE
-ifdef ZENX_NIGHTLY
-    ZENX_BUILDTYPE := NIGHTLY
+# Set ZEUS_BUILDTYPE
+ifdef ZEUS_NIGHTLY
+    ZEUS_BUILDTYPE := NIGHTLY
 endif
-ifdef ZENX_EXPERIMENTAL
-    ZENX_BUILDTYPE := EXPERIMENTAL
+ifdef ZEUS_EXPERIMENTAL
+    ZEUS_BUILDTYPE := EXPERIMENTAL
 endif
-#ifdef ZENX_MAINTENANCE
-#    ZENX_BUILDTYPE := MAINTENANCE
+#ifdef ZEUS_MAINTENANCE
+#    ZEUS_BUILDTYPE := MAINTENANCE
 #endif
-# Set Unofficial if no buildtype set (Buildtype should ONLY be set by ZENX Devs!)
-ifdef ZENX_BUILDTYPE
+# Set Unofficial if no buildtype set (Buildtype should ONLY be set by ZEUS Devs!)
+ifdef ZEUS_BUILDTYPE
 else
-    ZENX_BUILDTYPE := UNOFFICIAL
+    ZEUS_BUILDTYPE := UNOFFICIAL
 endif
 
 
@@ -218,11 +218,11 @@ DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
 PRODUCT_VERSION_MAJOR = 2
 PRODUCT_VERSION_MINOR = 0
 
-# Increase ZenX Version with each major release.
-ZENX_VERSION := 2.2
+# Increase Zeus Version with each major release.
+ZEUS_VERSION := 2.2
 
-LINEAGE_VERSION := ZenX-OS-v$(ZENX_VERSION).$(PRODUCT_VERSION_MINOR)-$(ZENX_BUILDTYPE)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-$(ZENX_BUILD_VARIANT)
-LINEAGE_DISPLAY_VERSION := ZenX-OS-v$(ZENX_VERSION).$(PRODUCT_VERSION_MINOR)-$(ZENX_BUILDTYPE)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-$(ZENX_BUILD_VARIANT)-
+LINEAGE_VERSION := Zeus-OS-v$(ZEUS_VERSION).$(PRODUCT_VERSION_MINOR)-$(ZEUS_BUILDTYPE)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-$(ZEUS_BUILD_VARIANT)
+LINEAGE_DISPLAY_VERSION := Zeus-OS-v$(ZEUS_VERSION).$(PRODUCT_VERSION_MINOR)-$(ZEUS_BUILDTYPE)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-$(ZEUS_BUILD_VARIANT)-
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
@@ -231,7 +231,7 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
-    ifneq ($(ZENX_BUILDTYPE), UNOFFICIAL)
+    ifneq ($(ZEUS_BUILDTYPE), UNOFFICIAL)
         ifndef TARGET_VENDOR_RELEASE_BUILD_ID
             ifneq ($(LINEAGE_EXTRAVERSION),)
                 # Remove leading dash from LINEAGE_EXTRAVERSION
@@ -247,13 +247,13 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
 endif
 endif
 
-ifneq ($(ZENX_BUILD_VARIANT),gapps)
+ifneq ($(ZEUS_BUILD_VARIANT),gapps)
     PRODUCT_PACKAGE_OVERLAYS += vendor/yaap/overlay/no_apex
 endif
 
 
 # Gapps
-ifeq ($(ZENX_BUILD_VARIANT),gapps)
+ifeq ($(ZEUS_BUILD_VARIANT),gapps)
     $(call inherit-product-if-exists, vendor/google/gms/config.mk)
     $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 endif
