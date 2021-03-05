@@ -64,7 +64,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     StitchImage \
     StitchImageService \
-    SimpleGalleryPro \
+    GalleryGo \
     ZeusLauncher
 
 # Fonts
