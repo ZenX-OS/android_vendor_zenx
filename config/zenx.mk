@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
 ifeq ($(ZENX_BUILD_VARIANT), vanilla)
 PRODUCT_PACKAGES += \
     Contacts \
-    Calendar \
+    Etar \
     DeskClock \
     Dialer \
     Email \
@@ -64,7 +64,8 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     StitchImage \
     StitchImageService \
-    SimpleGalleryPro
+    SimpleGalleryPro \
+    ZeusLauncher
 
 # Fonts
 PRODUCT_PACKAGES += \
@@ -107,7 +108,7 @@ PRODUCT_PACKAGES += \
     UiStyleAOSP \
     UiStyleRoundMedium \
     UiStyleNoCornerRadius \
-    UiStyleRectangle
+    UiStyleRoundLarge 
 
 # Tiles themes
 PRODUCT_PACKAGES += \

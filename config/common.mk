@@ -266,4 +266,4 @@ include vendor/lineage/config/system_sepolicy.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
--include packages/apps/Plugins/plugins.mk
+include packages/apps/Plugins/plugins.mk
