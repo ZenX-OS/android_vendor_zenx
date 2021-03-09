@@ -118,6 +118,16 @@ PRODUCT_PACKAGES += \
     StatusbarHeightLarge \
     StatusbarHeightExtraLarge \
     StatusbarHeightDualStatusbar
+
+# Brightness Thumbs 
+PRODUCT_PACKAGES += \
+    BrightnessThumbDefault \
+    BrightnessThumbAndroid \
+    BrightnessThumbApple \
+    BrightnessThumbBiowizard \
+    BrightnessThumbFlower \
+    BrightnessThumbYingYang \
+    BrightnessThumbZeus
     
 # Tiles themes
 PRODUCT_PACKAGES += \
