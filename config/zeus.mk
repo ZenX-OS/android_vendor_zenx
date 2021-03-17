@@ -36,6 +36,8 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/lineage/etc/permissions/privapp-permissions-zeus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-zeus.xml
 
+include vendor/opstuff/config.mk
+
 # AOSP packages
 ifeq ($(ZEUS_BUILD_VARIANT), vanilla)
 PRODUCT_PACKAGES += \
@@ -64,8 +66,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     StitchImage \
     StitchImageService \
-    GalleryGo \
-    ZeusLauncher
+    GalleryGo 
 
 # Fonts
 PRODUCT_PACKAGES += \
