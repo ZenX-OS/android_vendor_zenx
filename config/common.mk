@@ -260,7 +260,7 @@ endif
 endif
 
 ifneq ($(ZEUS_BUILD_VARIANT),gapps)
-    PRODUCT_PACKAGE_OVERLAYS += vendor/yaap/overlay/no_apex
+    PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/no_apex
 endif
 
 
