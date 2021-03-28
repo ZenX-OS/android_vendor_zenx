@@ -36,7 +36,11 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/lineage/etc/permissions/privapp-permissions-zeus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-zeus.xml
 
+ifeq  ($(WITH_OPAPPS), true)
 include vendor/opstuff/config.mk
+else
+include vendor/lineage/packages/apps/Lawnchair/lawnchair.mk
+endif
 
 # Offline charger
 PRODUCT_PACKAGES += \
