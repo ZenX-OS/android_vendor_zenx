@@ -68,6 +68,13 @@ PRODUCT_PACKAGES += \
     StitchImageService \
     GalleryGo 
 
+# Notch city
+PRODUCT_PACKAGES += \
+    HideCutout \
+    ImmersiveMode \
+    StatusBarStock \
+    StatusBarStockSysUI
+
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
