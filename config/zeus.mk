@@ -38,6 +38,11 @@ PRODUCT_COPY_FILES += \
 
 include vendor/opstuff/config.mk
 
+# Offline charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+
 # AOSP packages
 ifeq ($(ZEUS_BUILD_VARIANT), vanilla)
 PRODUCT_PACKAGES += \
