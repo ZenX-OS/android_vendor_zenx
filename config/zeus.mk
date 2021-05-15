@@ -38,7 +38,9 @@ PRODUCT_COPY_FILES += \
 
 ifeq  ($(WITH_OPAPPS), true)
 include vendor/opstuff/config.mk
-else
+endif
+
+ifeq ($(WITH_LAWNCHAIR),true)
 include vendor/lineage/packages/apps/Lawnchair/lawnchair.mk
 endif
 
@@ -75,7 +77,8 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     StitchImage \
     StitchImageService \
-    GalleryGo 
+    GalleryGo  \
+    Launcher3
 
 # Notch city
 PRODUCT_PACKAGES += \
